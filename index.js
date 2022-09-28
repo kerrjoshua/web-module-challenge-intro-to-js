@@ -259,11 +259,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startNum){
+  let strSong = (startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + (startNum - 1) + " bottles of soda on the wall");
+return strSong
 }
-
-
+let startNum = 5
+for (let i = startNum; i>0; i--){
+console.log(annoyingSong(i))
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
