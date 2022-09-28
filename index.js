@@ -73,10 +73,7 @@ Do the following:
 */
 
 function multiply(num1, num2){
-  let a = prompt("Please enter a number, 'a'.");
-let b = prompt("please enter another number, 'b'.");
-num1 = a; num2 = b;
-  return num1 * num2;
+    return num1 * num2;
 }
 
 
@@ -91,8 +88,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return (age * 7);
+  
 }
 
 
@@ -143,8 +141,31 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  //determine if dog is puppy or adult
+  if (age >= 1){
+    if (weight <= 5)
+    return (weight * .05)
+    else if (weight <= 10){
+      return (weight * .04)
+    }
+    else if (weight <= 15){
+      return (weight * .03)
+    }
+    else {
+      return (weight * .02)
+    }
+  }
+  else if (age >= 2/12 && age <= 4/12) {
+    return (weight * .1)
+  }
+  else if (age <= 7/12){
+    return (weight * .05)
+
+  }
+  else {
+    return (weight * .04)
+  }
 }
 
 
