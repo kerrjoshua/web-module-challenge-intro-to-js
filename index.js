@@ -20,6 +20,10 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 18;
+if (votingAge >= 18){
+  console.log(true)
+}
 
 
 /*
@@ -34,7 +38,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let firstSomething = 15
+let secondSomething = 25
+if (firstSomething < secondSomething){
+  firstSomething = Math.round(100 * Math.random());
+}
+console.log(firstSomething)
 
 
 
@@ -49,7 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let strYear = "1999";
+let intYear = Number(strYear);
+console.log(intYear)
 
 
 /*
@@ -62,6 +73,9 @@ Do the following:
 */
 
 function multiply(num1, num2){
+  let a = prompt("Please enter a number, 'a'.");
+let b = prompt("please enter another number, 'b'.");
+num1 = a; num2 = b;
   return num1 * num2;
 }
 
