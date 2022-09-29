@@ -282,8 +282,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+let grade = "F"
+  if (score >= 90) {
+    grade = "A"
+} else if (score >= 80){
+  grade = "B"
+} else if (score >= 70){
+  grade = "C"
+} else if (score >= 60){
+  grade = "D"
+}
+
+if (grade === "A" || grade === "F") {
+  return "you got an " + grade;
+} else { return "you got a " + grade}
 }
 
 
@@ -301,9 +314,34 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+function vowelCounter(yourString) {
+  let strText = yourString;
+  let vowelCount = 0
+  const baseVowels = ["a","A","e","E","i","I","o","O","u","U"];
+  const sometimesVowels = ["y","Y"];
+  for (i = 0; i < strText.length; i++){
+    for (j = 0; j < baseVowels.length; j++) {
+      if (strText.charAt(i) === baseVowels[j]){
+      vowelCount ++;
+      }
+    }
+  }
+  for (i = 0; i < strText.length; i++){
+    for (j = 0; j < sometimesVowels.length; j++){
+        if (strText.charAt(i) === sometimesVowels[j] ){
+          if (!(baseVowels.includes(strText.charAt(1 + i)) )){
+           vowelCount ++;
+            
+          }
+        }
+     }
+  }
+  let consU = strText.match(/qu/ig);
+  vowelCount = vowelCount - consU.length;
+  
+  
+ 
+return vowelCount}
 
 
 
